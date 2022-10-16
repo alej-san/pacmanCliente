@@ -1,0 +1,9 @@
+Introducir enemigo
+Implementar lose state
+Introducir intervalo
+Introducir una comprobacion del movimiento en condiciones
+Reducir el codigo de las funciones de movimiento
+Implementar la tercera dimension?
+
+
+Comprobar si voy a usar los botones para algo más para borrar las variables
