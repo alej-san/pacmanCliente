@@ -5,5 +5,5 @@ Introducir una comprobacion del movimiento en condiciones
 Reducir el codigo de las funciones de movimiento
 Implementar la tercera dimension?
 
-
+Mover funciones a otros archivos para limpiar el código
 Comprobar si voy a usar los botones para algo más para borrar las variables
