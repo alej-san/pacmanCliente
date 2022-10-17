@@ -1,10 +1,12 @@
 var pacman = pacman || {};
 pacman = {
     Level:class {
-        constructor(level, x, y){  
+        constructor(level, x, y, enx, eny){  
             this.level = level
             this.x= x;
             this.y= y;
+            this.enx= enx;
+            this.eny= eny;
             table = document.getElementById("table");
             up = document.getElementById("up");
             down = document.getElementById("down");
@@ -30,29 +32,40 @@ pacman = {
             }
         }
         moveChecker(current, next){
-            try{
+           // try{
                 if(this.level[current][next]==0){
                     return true;
                 } else return false;
-            }catch(error){
-                console.log(("oops"))
-            }
+          //  }catch(error){
+          //      console.log(("oops"))
+         //   } return false;
         }
         movementDown(){ 
             if(this.moveChecker(this.x+1, this.y)){
             this.level[this.x][this.y]=0;
             this.x++;
             this.level[this.x][this.y]="x";
-            this.levelPrint(); 
+            this.levelPrint();
             }
-        }
-        movementUp(){                
+            this.enemy();
+        }        
+        movementUp(){
+            if(this.moveChecker(this.x-1, this.y)){
+            this.level[this.x][this.y]=0;
+            this.x--;
+            this.level[this.x][this.y]="x";
+            this.levelPrint();
+            }
+            this.enemy();
+        } 
+        movementLeft(){                
             if(this.moveChecker(this.x, this.y-1)){
             this.level[this.x][this.y]=0;
             this.y--;
             this.level[this.x][this.y]="x";
             this.levelPrint();
             }
+            this.enemy();
         }
         movementRight(){
             if(this.moveChecker(this.x, this.y+1)){
@@ -61,14 +74,12 @@ pacman = {
             this.level[this.x][this.y]="x";
             this.levelPrint();
             }
+            this.enemy();
         }
-        movementLeft(){
-            if(this.moveChecker(this.x-1, this.y)){
-            this.level[this.x][this.y]=0;
-            this.x--;
-            this.level[this.x][this.y]="x";
-            this.levelPrint();
-            }
-        } 
+        enemy(){
+            this.level[this.enx][this.eny]=0;
+            this.eny--;
+            this.level[this.enx][this.eny]="A";
+        }
     }
 }
