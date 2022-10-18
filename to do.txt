@@ -6,3 +6,5 @@ He dejado el programa en el estado en el que está de forma funcional porque no 
 Me disgusta bastante la redundancia en el código, pero temo que tocar algo ahora mismo conlleve horas de confusión.
 Sigo con la mismas dudas del correo que mandé, simplemente decidí "terminar" código para dejarlo comentado y esta vez
 funcionaba sin comprender que he hecho diferente.
+
+Si el movimiento del jugador y del enemigo es el mismo, se mueve en las cuatro direcciones y comprueba que no se salga de rango, se supone que el código debería ser el mismo para los dos.
